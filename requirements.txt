@@ -1,0 +1,12 @@
+rasa
+numpy
+scipy
+scikit-learn
+tensorflow
+requests
+pyyaml
+ruamel.yaml
+jsonschema
+coloredlogs
+sanic
+SQLAlchemy
