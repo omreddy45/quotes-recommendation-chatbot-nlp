@@ -1,0 +1,123 @@
+version: "3.1"
+
+stories:
+
+  - story: test greet and motivation
+    steps:
+      - user: |
+          hello
+        intent: greet
+      - action: utter_greet
+      - user: |
+          give me motivation
+        intent: motivation
+      - action: utter_motivation
+      - action: utter_ask_feedback
+
+  - story: test inspiration flow
+    steps:
+      - user: |
+          inspire me
+        intent: inspiration
+      - action: utter_inspiration
+      - action: utter_ask_feedback
+
+  - story: test love flow
+    steps:
+      - user: |
+          love quote
+        intent: love
+      - action: utter_love
+      - action: utter_ask_feedback
+
+  - story: test funny flow
+    steps:
+      - user: |
+          make me laugh
+        intent: funny
+      - action: utter_funny
+      - action: utter_ask_feedback
+
+  - story: test success flow
+    steps:
+      - user: |
+          success quote
+        intent: success
+      - action: utter_success
+      - action: utter_ask_feedback
+
+  - story: test life flow
+    steps:
+      - user: |
+          quote about life
+        intent: life
+      - action: utter_life
+      - action: utter_ask_feedback
+
+  - story: test happiness flow
+    steps:
+      - user: |
+          happiness quote
+        intent: happiness
+      - action: utter_happiness
+      - action: utter_ask_feedback
+
+  - story: test wisdom flow
+    steps:
+      - user: |
+          wise words
+        intent: wisdom
+      - action: utter_wisdom
+      - action: utter_ask_feedback
+
+  - story: test goodbye
+    steps:
+      - user: |
+          bye
+        intent: goodbye
+      - action: utter_goodbye
+
+  - story: test not satisfied then switch
+    steps:
+      - user: |
+          motivate me
+        intent: motivation
+      - action: utter_motivation
+      - action: utter_ask_feedback
+      - user: |
+          give another one
+        intent: not_satisfied
+      - action: utter_ask_category
+      - user: |
+          funny quote
+        intent: funny
+      - action: utter_funny
+      - action: utter_ask_feedback
+
+  - story: test feeling sad
+    steps:
+      - user: |
+          i am feeling sad
+        intent: feeling_sad
+      - action: utter_feeling_sad
+
+  - story: test feeling stressed
+    steps:
+      - user: |
+          i am stressed
+        intent: feeling_stressed
+      - action: utter_feeling_stressed
+
+  - story: test help
+    steps:
+      - user: |
+          what can you do
+        intent: help
+      - action: utter_help
+
+  - story: test thank you
+    steps:
+      - user: |
+          thank you
+        intent: thank_you
+      - action: utter_thank_you

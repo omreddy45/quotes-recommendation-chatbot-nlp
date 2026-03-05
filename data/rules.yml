@@ -1,0 +1,51 @@
+version: "3.1"
+
+rules:
+
+  # ── Say goodbye anytime ──
+  - rule: say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # ── Low confidence fallback ──
+  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+    steps:
+      - intent: nlu_fallback
+      - action: utter_default
+
+  # ── Help anytime ──
+  - rule: show help when asked
+    steps:
+      - intent: help
+      - action: utter_help
+
+  # ── Thank you anytime ──
+  - rule: respond to thank you
+    steps:
+      - intent: thank_you
+      - action: utter_thank_you
+
+  # ── Feeling sad triggers support ──
+  - rule: respond to feeling sad
+    steps:
+      - intent: feeling_sad
+      - action: utter_feeling_sad
+
+  # ── Feeling stressed triggers support ──
+  - rule: respond to feeling stressed
+    steps:
+      - intent: feeling_stressed
+      - action: utter_feeling_stressed
+
+  # ── Another quote anytime ──
+  - rule: give another quote when asked
+    steps:
+      - intent: another_quote
+      - action: utter_another_quote
+
+  # ── Daily quote anytime ──
+  - rule: give daily quote when asked
+    steps:
+      - intent: daily_quote
+      - action: utter_daily_quote

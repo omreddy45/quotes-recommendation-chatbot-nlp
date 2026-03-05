@@ -1,0 +1,343 @@
+version: "3.1"
+
+stories:
+
+  # ── Greeting Flow ──
+  - story: greet path
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  # ── Motivation Flow ──
+  - story: motivation path
+    steps:
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_ask_feedback
+
+  - story: greet then motivation
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_ask_feedback
+
+  # ── Inspiration Flow ──
+  - story: inspiration path
+    steps:
+      - intent: inspiration
+      - action: utter_inspiration
+      - action: utter_ask_feedback
+
+  - story: greet then inspiration
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: inspiration
+      - action: utter_inspiration
+      - action: utter_ask_feedback
+
+  # ── Love Flow ──
+  - story: love path
+    steps:
+      - intent: love
+      - action: utter_love
+      - action: utter_ask_feedback
+
+  - story: greet then love
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: love
+      - action: utter_love
+      - action: utter_ask_feedback
+
+  # ── Funny Flow ──
+  - story: funny path
+    steps:
+      - intent: funny
+      - action: utter_funny
+      - action: utter_ask_feedback
+
+  - story: greet then funny
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: funny
+      - action: utter_funny
+      - action: utter_ask_feedback
+
+  # ── Success Flow ──
+  - story: success path
+    steps:
+      - intent: success
+      - action: utter_success
+      - action: utter_ask_feedback
+
+  - story: greet then success
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: success
+      - action: utter_success
+      - action: utter_ask_feedback
+
+  # ── Life Flow ──
+  - story: life path
+    steps:
+      - intent: life
+      - action: utter_life
+      - action: utter_ask_feedback
+
+  - story: greet then life
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: life
+      - action: utter_life
+      - action: utter_ask_feedback
+
+  # ── Happiness Flow ──
+  - story: happiness path
+    steps:
+      - intent: happiness
+      - action: utter_happiness
+      - action: utter_ask_feedback
+
+  - story: greet then happiness
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: happiness
+      - action: utter_happiness
+      - action: utter_ask_feedback
+
+  # ── Wisdom Flow ──
+  - story: wisdom path
+    steps:
+      - intent: wisdom
+      - action: utter_wisdom
+      - action: utter_ask_feedback
+
+  - story: greet then wisdom
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: wisdom
+      - action: utter_wisdom
+      - action: utter_ask_feedback
+
+  # ── Satisfaction Flows ──
+  - story: satisfied after quote
+    steps:
+      - intent: satisfied
+      - action: utter_greet
+
+  - story: motivation then satisfied
+    steps:
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_ask_feedback
+      - intent: satisfied
+      - action: utter_greet
+
+  - story: not satisfied path
+    steps:
+      - intent: not_satisfied
+      - action: utter_ask_category
+
+  - story: motivation then not satisfied then inspiration
+    steps:
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_ask_feedback
+      - intent: not_satisfied
+      - action: utter_ask_category
+      - intent: inspiration
+      - action: utter_inspiration
+      - action: utter_ask_feedback
+
+  - story: not satisfied then motivation
+    steps:
+      - intent: not_satisfied
+      - action: utter_ask_category
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_ask_feedback
+
+  - story: not satisfied then funny
+    steps:
+      - intent: not_satisfied
+      - action: utter_ask_category
+      - intent: funny
+      - action: utter_funny
+      - action: utter_ask_feedback
+
+  - story: not satisfied then love
+    steps:
+      - intent: not_satisfied
+      - action: utter_ask_category
+      - intent: love
+      - action: utter_love
+      - action: utter_ask_feedback
+
+  # ── Feeling Sad Flow ──
+  - story: feeling sad path
+    steps:
+      - intent: feeling_sad
+      - action: utter_feeling_sad
+
+  - story: feeling sad then motivation
+    steps:
+      - intent: feeling_sad
+      - action: utter_feeling_sad
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_ask_feedback
+
+  - story: feeling sad then inspiration
+    steps:
+      - intent: feeling_sad
+      - action: utter_feeling_sad
+      - intent: inspiration
+      - action: utter_inspiration
+      - action: utter_ask_feedback
+
+  # ── Feeling Stressed Flow ──
+  - story: feeling stressed path
+    steps:
+      - intent: feeling_stressed
+      - action: utter_feeling_stressed
+
+  - story: feeling stressed then happiness
+    steps:
+      - intent: feeling_stressed
+      - action: utter_feeling_stressed
+      - intent: happiness
+      - action: utter_happiness
+      - action: utter_ask_feedback
+
+  - story: feeling stressed then wisdom
+    steps:
+      - intent: feeling_stressed
+      - action: utter_feeling_stressed
+      - intent: wisdom
+      - action: utter_wisdom
+      - action: utter_ask_feedback
+
+  # ── Help Flow ──
+  - story: help path
+    steps:
+      - intent: help
+      - action: utter_help
+
+  - story: greet then help
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: help
+      - action: utter_help
+
+  # ── Thank You Flow ──
+  - story: thank you path
+    steps:
+      - intent: thank_you
+      - action: utter_thank_you
+
+  - story: quote then thank you then goodbye
+    steps:
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_ask_feedback
+      - intent: thank_you
+      - action: utter_thank_you
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # ── Full Conversation Flows ──
+  - story: complete conversation motivation
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_ask_feedback
+      - intent: satisfied
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: complete conversation with switch
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: funny
+      - action: utter_funny
+      - action: utter_ask_feedback
+      - intent: not_satisfied
+      - action: utter_ask_category
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_ask_feedback
+      - intent: satisfied
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: sad user gets help
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: feeling_sad
+      - action: utter_feeling_sad
+      - intent: inspiration
+      - action: utter_inspiration
+      - action: utter_ask_feedback
+      - intent: satisfied
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # ── Another Quote Flow ──
+  - story: another quote after motivation
+    steps:
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_ask_feedback
+      - intent: another_quote
+      - action: utter_another_quote
+
+  - story: another quote after funny
+    steps:
+      - intent: funny
+      - action: utter_funny
+      - action: utter_ask_feedback
+      - intent: another_quote
+      - action: utter_another_quote
+
+  - story: another quote standalone
+    steps:
+      - intent: another_quote
+      - action: utter_another_quote
+
+  # ── Daily Quote Flow ──
+  - story: daily quote path
+    steps:
+      - intent: daily_quote
+      - action: utter_daily_quote
+
+  - story: greet then daily quote
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: daily_quote
+      - action: utter_daily_quote
+
+  - story: daily quote then motivation
+    steps:
+      - intent: daily_quote
+      - action: utter_daily_quote
+      - intent: motivation
+      - action: utter_motivation
+      - action: utter_ask_feedback
