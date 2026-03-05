@@ -1,0 +1,209 @@
+version: "3.1"
+
+# ═══════════════════════════════════════════════
+# INTENTS (17 intents — improved from 9)
+# ═══════════════════════════════════════════════
+intents:
+  - greet
+  - motivation
+  - inspiration
+  - love
+  - funny
+  - success
+  - life
+  - happiness
+  - wisdom
+  - satisfied
+  - not_satisfied
+  - goodbye
+  - help
+  - feeling_sad
+  - feeling_stressed
+  - thank_you
+  - another_quote
+  - daily_quote
+
+# ═══════════════════════════════════════════════
+# RESPONSES (5–8 variations per category)
+# ═══════════════════════════════════════════════
+responses:
+
+  # ── GREET ──
+  utter_greet:
+    - text: "Hello! 😊 What kind of quote would you like today? Choose from: Motivation, Inspiration, Love, Success, Funny, Life, Happiness, or Wisdom!"
+    - text: "Hey there! 👋 Welcome! I can share quotes on Motivation, Inspiration, Love, Success, Funny, Life, Happiness, or Wisdom. What sounds good?"
+    - text: "Hi! 🌟 Ready to get inspired? Ask me for a quote — Motivation, Inspiration, Love, Success, Funny, Life, Happiness, or Wisdom!"
+
+  # ── MOTIVATION ──
+  utter_motivation:
+    - text: "💪 \"Success is not final, failure is not fatal: It is the courage to continue that counts.\" — Winston Churchill"
+    - text: "🔥 \"Push yourself, because no one else is going to do it for you.\" — Unknown"
+    - text: "💪 \"The only way to do great work is to love what you do.\" — Steve Jobs"
+    - text: "🔥 \"Don't watch the clock; do what it does. Keep going.\" — Sam Levenson"
+    - text: "💪 \"It does not matter how slowly you go as long as you do not stop.\" — Confucius"
+    - text: "🔥 \"Hardships often prepare ordinary people for an extraordinary destiny.\" — C.S. Lewis"
+    - text: "💪 \"Believe you can and you're halfway there.\" — Theodore Roosevelt"
+    - text: "🔥 \"You are never too old to set another goal or to dream a new dream.\" — C.S. Lewis"
+    - text: "💪 \"The secret of getting ahead is getting started.\" — Mark Twain"
+    - text: "🔥 \"Act as if what you do makes a difference. It does.\" — William James"
+
+  # ── INSPIRATION ──
+  utter_inspiration:
+    - text: "✨ \"Believe you can and you're halfway there.\" — Theodore Roosevelt"
+    - text: "🌟 \"Dream big and dare to fail.\" — Norman Vaughan"
+    - text: "✨ \"The future belongs to those who believe in the beauty of their dreams.\" — Eleanor Roosevelt"
+    - text: "🌟 \"In the middle of every difficulty lies opportunity.\" — Albert Einstein"
+    - text: "✨ \"What lies behind us and what lies before us are tiny matters compared to what lies within us.\" — Ralph Waldo Emerson"
+    - text: "🌟 \"The only impossible journey is the one you never begin.\" — Tony Robbins"
+    - text: "✨ \"Every great dream begins with a dreamer.\" — Harriet Tubman"
+    - text: "🌟 \"You must be the change you wish to see in the world.\" — Mahatma Gandhi"
+    - text: "✨ \"Start where you are. Use what you have. Do what you can.\" — Arthur Ashe"
+    - text: "🌟 \"It is during our darkest moments that we must focus to see the light.\" — Aristotle"
+
+  # ── LOVE ──
+  utter_love:
+    - text: "❤️ \"Love is not about how many days you've been together, but how much you love each other every day.\" — Unknown"
+    - text: "💕 \"Where there is love, there is life.\" — Mahatma Gandhi"
+    - text: "❤️ \"The best thing to hold onto in life is each other.\" — Audrey Hepburn"
+    - text: "💕 \"Love is composed of a single soul inhabiting two bodies.\" — Aristotle"
+    - text: "❤️ \"To love and be loved is to feel the sun from both sides.\" — David Viscott"
+    - text: "💕 \"You know you're in love when you can't fall asleep because reality is finally better than your dreams.\" — Dr. Seuss"
+    - text: "❤️ \"Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.\" — Lao Tzu"
+    - text: "💕 \"Love is when the other person's happiness is more important than your own.\" — H. Jackson Brown Jr."
+    - text: "❤️ \"I have decided to stick with love. Hate is too great a burden to bear.\" — Martin Luther King Jr."
+    - text: "💕 \"The greatest thing you'll ever learn is just to love and be loved in return.\" — Eden Ahbez"
+
+  # ── FUNNY ──
+  utter_funny:
+    - text: "😂 \"I'm not lazy, I'm on energy-saving mode.\" — Unknown"
+    - text: "🤣 \"Life is short. Smile while you still have teeth.\" — Mallory Hopkins"
+    - text: "😂 \"I didn't fail the test. I just found 100 ways to do it wrong.\" — Benjamin Franklin"
+    - text: "🤣 \"Behind every great man is a woman rolling her eyes.\" — Jim Carrey"
+    - text: "😂 \"I'm not arguing, I'm just explaining why I'm right.\" — Unknown"
+    - text: "🤣 \"My bed is a magical place where I suddenly remember everything I forgot to do.\" — Unknown"
+    - text: "😂 \"I used to think I was indecisive. But now I'm not so sure.\" — Unknown"
+    - text: "🤣 \"The only mystery in life is why the kamikaze pilots wore helmets.\" — Al McGuire"
+    - text: "😂 \"A day without laughter is a day wasted.\" — Charlie Chaplin"
+    - text: "🤣 \"I'm on a seafood diet. I see food and I eat it.\" — Unknown"
+
+  # ── SUCCESS ──
+  utter_success:
+    - text: "🏆 \"Success usually comes to those who are too busy to be looking for it.\" — Henry David Thoreau"
+    - text: "🚀 \"Don't watch the clock; do what it does. Keep going.\" — Sam Levenson"
+    - text: "🏆 \"The road to success and the road to failure are almost exactly the same.\" — Colin R. Davis"
+    - text: "🚀 \"Success is not the key to happiness. Happiness is the key to success.\" — Albert Schweitzer"
+    - text: "🏆 \"I find that the harder I work, the more luck I seem to have.\" — Thomas Jefferson"
+    - text: "🚀 \"Success is walking from failure to failure with no loss of enthusiasm.\" — Winston Churchill"
+    - text: "🏆 \"The only place where success comes before work is in the dictionary.\" — Vidal Sassoon"
+    - text: "🚀 \"Don't be afraid to give up the good to go for the great.\" — John D. Rockefeller"
+    - text: "🏆 \"Opportunities don't happen. You create them.\" — Chris Grosser"
+    - text: "🚀 \"Success is how high you bounce when you hit bottom.\" — George S. Patton"
+
+  # ── LIFE ──
+  utter_life:
+    - text: "🌿 \"Life is what happens when you're busy making other plans.\" — John Lennon"
+    - text: "🍃 \"In three words I can sum up everything I've learned about life: it goes on.\" — Robert Frost"
+    - text: "🌿 \"The purpose of our lives is to be happy.\" — Dalai Lama"
+    - text: "🍃 \"Life is really simple, but we insist on making it complicated.\" — Confucius"
+    - text: "🌿 \"Get busy living or get busy dying.\" — Stephen King"
+    - text: "🍃 \"You only live once, but if you do it right, once is enough.\" — Mae West"
+    - text: "🌿 \"Life is a journey, not a destination.\" — Ralph Waldo Emerson"
+    - text: "🍃 \"The unexamined life is not worth living.\" — Socrates"
+    - text: "🌿 \"Life isn't about finding yourself. Life is about creating yourself.\" — George Bernard Shaw"
+    - text: "🍃 \"Turn your wounds into wisdom.\" — Oprah Winfrey"
+
+  # ── HAPPINESS ──
+  utter_happiness:
+    - text: "😊 \"Happiness is not something ready made. It comes from your own actions.\" — Dalai Lama"
+    - text: "🌈 \"The most important thing is to enjoy your life — to be happy. It's all that matters.\" — Audrey Hepburn"
+    - text: "😊 \"Happiness depends upon ourselves.\" — Aristotle"
+    - text: "🌈 \"For every minute you are angry you lose sixty seconds of happiness.\" — Ralph Waldo Emerson"
+    - text: "😊 \"Count your age by friends, not years. Count your life by smiles, not tears.\" — John Lennon"
+    - text: "🌈 \"The happiest people don't have the best of everything, they make the best of everything.\" — Unknown"
+    - text: "😊 \"Happiness is a warm puppy.\" — Charles M. Schulz"
+    - text: "🌈 \"Think of all the beauty still left around you and be happy.\" — Anne Frank"
+    - text: "😊 \"There is only one happiness in this life, to love and be loved.\" — George Sand"
+    - text: "🌈 \"Be happy for this moment. This moment is your life.\" — Omar Khayyam"
+
+  # ── WISDOM ──
+  utter_wisdom:
+    - text: "🦉 \"The only true wisdom is in knowing you know nothing.\" — Socrates"
+    - text: "📚 \"An investment in knowledge pays the best interest.\" — Benjamin Franklin"
+    - text: "🦉 \"The mind is everything. What you think you become.\" — Buddha"
+    - text: "📚 \"Knowing yourself is the beginning of all wisdom.\" — Aristotle"
+    - text: "🦉 \"The fool doth think he is wise, but the wise man knows himself to be a fool.\" — William Shakespeare"
+    - text: "📚 \"In the middle of difficulty lies opportunity.\" — Albert Einstein"
+    - text: "🦉 \"We do not remember days, we remember moments.\" — Cesare Pavese"
+    - text: "📚 \"It is the mark of an educated mind to be able to entertain a thought without accepting it.\" — Aristotle"
+    - text: "🦉 \"By three methods we may learn wisdom: First, by reflection, which is noblest; second, by imitation; third by experience, which is the bitterest.\" — Confucius"
+    - text: "📚 \"Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.\" — Rumi"
+
+  # ── FEEDBACK ──
+  utter_ask_feedback:
+    - text: "Did you like this quote? 😊 (Say 'yes' or 'no')"
+    - text: "How was that? 💬 Want another quote or a different category?"
+    - text: "Hope you liked it! 🌟 Shall I share another one?"
+
+  # ── NOT SATISFIED → ASK CATEGORY ──
+  utter_ask_category:
+    - text: "Sorry about that! 😊 What other kind of quote would you like? Choose from: Motivation, Inspiration, Love, Success, Funny, Life, Happiness, or Wisdom!"
+    - text: "No worries! 🔄 Let me try another category. What are you in the mood for? Motivation, Inspiration, Love, Success, Funny, Life, Happiness, or Wisdom?"
+
+  # ── FALLBACK / DEFAULT ──
+  utter_default:
+    - text: "🤔 I didn't quite understand that. Could you ask for a quote category like Motivation, Inspiration, Love, Success, Funny, Life, Happiness, or Wisdom?"
+    - text: "Hmm, I'm not sure what you mean. 😅 Try asking for a specific quote type — like 'give me a motivational quote' or 'inspire me'!"
+
+  # ── GOODBYE ──
+  utter_goodbye:
+    - text: "Goodbye! 👋 Stay positive and keep smiling! ✨"
+    - text: "See you later! 🌟 Remember — every day is a chance to be amazing!"
+    - text: "Bye! 💫 Take care and stay inspired!"
+
+  # ── HELP ──
+  utter_help:
+    - text: "🆘 I can recommend quotes in these categories:\n\n💪 **Motivation** — Fuel your drive\n✨ **Inspiration** — Believe in yourself\n❤️ **Love** — Heartfelt messages\n🏆 **Success** — Achieve greatness\n😂 **Funny** — Lighten your mood\n🌿 **Life** — Life wisdom\n😊 **Happiness** — Find joy\n🦉 **Wisdom** — Thoughtful insights\n\nJust type what you're looking for!"
+
+  # ── FEELING SAD ──
+  utter_feeling_sad:
+    - text: "I'm sorry you're feeling that way. 💙 Here's something for you:\n\n\"The darkest nights produce the brightest stars.\" — John Green\n\nWould you like a motivational or inspirational quote to lift your spirits?"
+    - text: "It's okay to not be okay sometimes. 🤗 Remember:\n\n\"Every storm runs out of rain.\" — Maya Angelou\n\nWant me to share something uplifting?"
+    - text: "Sending you a virtual hug! 💙\n\n\"Tough times never last, but tough people do.\" — Robert H. Schuller\n\nShall I share more comforting quotes?"
+
+  # ── FEELING STRESSED ──
+  utter_feeling_stressed:
+    - text: "Take a deep breath. 🧘\n\n\"Almost everything will work again if you unplug it for a few minutes, including you.\" — Anne Lamott\n\nWould you like a calming or motivational quote?"
+    - text: "Stress is temporary, your strength is permanent! 💪\n\n\"You don't have to control your thoughts. You just have to stop letting them control you.\" — Dan Millman\n\nWant me to share more quotes to help you relax?"
+    - text: "Hey, it's going to be alright. 🌿\n\n\"The greatest weapon against stress is our ability to choose one thought over another.\" — William James\n\nShall I find something calming for you?"
+
+  # ── THANK YOU ──
+  utter_thank_you:
+    - text: "You're welcome! 😊 Feel free to ask for more quotes anytime!"
+    - text: "Happy to help! 🌟 Want to explore another category?"
+    - text: "My pleasure! 💫 I'm here whenever you need a quote boost!"
+
+  # ── ANOTHER QUOTE ──
+  utter_another_quote:
+    - text: "Sure! Here's another one 🔄\n\n💪 \"The only limit to our realization of tomorrow will be our doubts of today.\" — Franklin D. Roosevelt"
+    - text: "Coming right up! 🎯\n\n✨ \"What you get by achieving your goals is not as important as what you become by achieving your goals.\" — Zig Ziglar"
+    - text: "Here you go! 🌟\n\n🔥 \"Everything you've ever wanted is on the other side of fear.\" — George Addair"
+    - text: "One more for you! 💫\n\n🦉 \"The best time to plant a tree was 20 years ago. The second best time is now.\" — Chinese Proverb"
+    - text: "Absolutely! 😊\n\n🌿 \"Not everything that is faced can be changed, but nothing can be changed until it is faced.\" — James Baldwin"
+    - text: "Here's a fresh one! 🎲\n\n🏆 \"It is never too late to be what you might have been.\" — George Eliot"
+    - text: "Another gem! 💎\n\n❤️ \"Happiness is not by chance, but by choice.\" — Jim Rohn"
+    - text: "Keep them coming! 🚀\n\n😊 \"Do what you can, with what you have, where you are.\" — Theodore Roosevelt"
+
+  # ── DAILY QUOTE / QUOTE OF THE DAY ──
+  utter_daily_quote:
+    - text: "🌟 **Quote of the Day:**\n\n\"The future depends on what you do today.\" — Mahatma Gandhi\n\n🌅 Make today count!"
+    - text: "🌟 **Quote of the Day:**\n\n\"You are never too old to set another goal or to dream a new dream.\" — C.S. Lewis\n\n🌅 Start something new today!"
+    - text: "🌟 **Quote of the Day:**\n\n\"The only person you are destined to become is the person you decide to be.\" — Ralph Waldo Emerson\n\n🌅 Choose wisely today!"
+    - text: "🌟 **Quote of the Day:**\n\n\"In the middle of every difficulty lies opportunity.\" — Albert Einstein\n\n🌅 Turn challenges into stepping stones!"
+    - text: "🌟 **Quote of the Day:**\n\n\"Your time is limited, don't waste it living someone else's life.\" — Steve Jobs\n\n🌅 Live authentically today!"
+
+# ═══════════════════════════════════════════════
+# SESSION CONFIG
+# ═══════════════════════════════════════════════
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

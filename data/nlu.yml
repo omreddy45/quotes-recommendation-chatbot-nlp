@@ -1,0 +1,501 @@
+version: "3.1"
+
+nlu:
+
+# ─────────────────────────────────────────────
+# GREETING INTENT (20 examples)
+# ─────────────────────────────────────────────
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good evening
+    - hello there
+    - hey bot
+    - hi there
+    - good afternoon
+    - what's up
+    - howdy
+    - hey there
+    - greetings
+    - hello bot
+    - hi bot
+    - yo
+    - sup
+    - hola
+    - hey buddy
+    - hello friend
+
+# ─────────────────────────────────────────────
+# MOTIVATION INTENT (25 examples)
+# ─────────────────────────────────────────────
+- intent: motivation
+  examples: |
+    - give me motivation
+    - i need motivation
+    - motivate me
+    - some motivational quote
+    - inspire me to work hard
+    - i feel lazy
+    - i need encouragement
+    - motivational quote please
+    - i want to feel motivated
+    - can you motivate me
+    - share a motivational quote
+    - i need a push
+    - feeling demotivated
+    - help me stay motivated
+    - give me strength
+    - i need willpower
+    - something to keep me going
+    - i want motivation
+    - boost my motivation
+    - fire me up
+    - i lack motivation today
+    - push me to do better
+    - i need drive
+    - motivational words
+    - give me a reason to keep going
+
+# ─────────────────────────────────────────────
+# INSPIRATION INTENT (25 examples)
+# ─────────────────────────────────────────────
+- intent: inspiration
+  examples: |
+    - give me inspiration
+    - inspire me
+    - i need inspiration
+    - inspirational quote please
+    - something inspiring
+    - share an inspiring message
+    - i want to be inspired
+    - give me an inspiring quote
+    - tell me something inspiring
+    - i need an uplifting message
+    - inspiring words please
+    - share some inspiration
+    - i want inspiration
+    - give me hope
+    - inspire my day
+    - something uplifting
+    - uplifting quote
+    - i need an inspirational thought
+    - fill me with inspiration
+    - inspiring thoughts
+    - enlighten me
+    - give me a spark of inspiration
+    - i want to dream big
+    - help me believe in myself
+    - share something meaningful
+
+# ─────────────────────────────────────────────
+# LOVE INTENT (25 examples)
+# ─────────────────────────────────────────────
+- intent: love
+  examples: |
+    - give me a love quote
+    - romantic quote
+    - something about love
+    - love message
+    - quote about relationships
+    - tell me about love
+    - share a love quote
+    - i want a romantic message
+    - love quote please
+    - say something romantic
+    - beautiful love quote
+    - give me a relationship quote
+    - i want to read about love
+    - share something about love
+    - heartfelt quote about love
+    - romance quote
+    - quote about loving someone
+    - deep love quote
+    - sweet love message
+    - tell me a love story quote
+    - share a heartfelt message
+    - i believe in love
+    - love is beautiful
+    - give me a quote about caring
+    - quote about affection
+
+# ─────────────────────────────────────────────
+# FUNNY INTENT (25 examples)
+# ─────────────────────────────────────────────
+- intent: funny
+  examples: |
+    - tell me something funny
+    - funny quote
+    - make me laugh
+    - joke please
+    - humorous quote
+    - something humorous
+    - share a funny quote
+    - i need a laugh
+    - make me smile
+    - lighten my mood
+    - humor me
+    - give me a funny one
+    - tell me a joke
+    - funny saying
+    - comedy quote
+    - i want to laugh
+    - cheer me up with humor
+    - witty quote
+    - sarcastic quote
+    - give me a humorous quote
+    - something to make me giggle
+    - ha ha give me a funny quote
+    - light hearted quote
+    - playful quote
+    - amusing quote please
+
+# ─────────────────────────────────────────────
+# SUCCESS INTENT (25 examples)
+# ─────────────────────────────────────────────
+- intent: success
+  examples: |
+    - success quote
+    - quote about success
+    - help me succeed
+    - something about achievement
+    - how to be successful
+    - give me a success quote
+    - i want to achieve more
+    - share a quote about winning
+    - tell me about success
+    - quote about achievement
+    - i want to be successful
+    - how can i succeed in life
+    - success mantra
+    - winning quote
+    - share something about hard work and success
+    - ambitious quote
+    - quote about reaching goals
+    - give me a quote about excellence
+    - inspire me to win
+    - i want to achieve greatness
+    - path to success
+    - keys to success quote
+    - quote about determination
+    - give me an achievement quote
+    - success is my goal
+
+# ─────────────────────────────────────────────
+# LIFE INTENT (25 examples) [NEW CATEGORY]
+# ─────────────────────────────────────────────
+- intent: life
+  examples: |
+    - give me a life quote
+    - quote about life
+    - tell me about life
+    - meaning of life
+    - life lessons
+    - share a life quote
+    - philosophical quote
+    - deep quote about life
+    - what is the meaning of life
+    - life is beautiful
+    - quote about living life
+    - life wisdom
+    - something about life
+    - share a quote about living
+    - give me a deep quote
+    - life changing quote
+    - quote about existence
+    - profound quote
+    - life philosophy
+    - i need perspective on life
+    - help me understand life
+    - life related quote
+    - tell me something deep about life
+    - quote about the journey of life
+    - share your thoughts on life
+
+# ─────────────────────────────────────────────
+# HAPPINESS INTENT (25 examples) [NEW CATEGORY]
+# ─────────────────────────────────────────────
+- intent: happiness
+  examples: |
+    - happiness quote
+    - give me a happy quote
+    - something about happiness
+    - how to be happy
+    - quote about joy
+    - share a happiness quote
+    - i want to feel happy
+    - joyful quote
+    - tell me about happiness
+    - cheerful quote
+    - quote about being content
+    - give me a positive quote
+    - positivity quote
+    - spread happiness
+    - quote about finding joy
+    - happy thoughts
+    - make me feel good
+    - blissful quote
+    - quote about inner peace
+    - i need some positivity
+    - share a joyful message
+    - what makes life happy
+    - peace of mind quote
+    - gratitude quote
+    - thankful quote
+
+# ─────────────────────────────────────────────
+# WISDOM INTENT (25 examples) [NEW CATEGORY]
+# ─────────────────────────────────────────────
+- intent: wisdom
+  examples: |
+    - wisdom quote
+    - give me a wise quote
+    - share some wisdom
+    - wise words
+    - words of wisdom
+    - give me a thoughtful quote
+    - insightful quote
+    - something wise
+    - tell me something wise
+    - ancient wisdom
+    - share a wise saying
+    - philosophical wisdom
+    - pearl of wisdom
+    - give me a quote about knowledge
+    - intellectual quote
+    - thought provoking quote
+    - something to think about
+    - deep wisdom
+    - sage advice
+    - wise saying please
+    - give me an insightful thought
+    - i need wisdom
+    - wise counsel
+    - enlightening quote
+    - quote about learning
+
+# ─────────────────────────────────────────────
+# SATISFIED INTENT (20 examples)
+# ─────────────────────────────────────────────
+- intent: satisfied
+  examples: |
+    - yes
+    - that helped
+    - nice quote
+    - i like it
+    - good one
+    - that's great
+    - wonderful
+    - loved it
+    - amazing quote
+    - perfect
+    - exactly what i needed
+    - beautiful
+    - that was nice
+    - thank you for that
+    - i appreciate it
+    - lovely quote
+    - very nice
+    - awesome
+    - great one
+    - that made my day
+
+# ─────────────────────────────────────────────
+# NOT SATISFIED INTENT (20 examples)
+# ─────────────────────────────────────────────
+- intent: not_satisfied
+  examples: |
+    - no
+    - not helpful
+    - give another one
+    - something else
+    - i don't like it
+    - try again
+    - not good
+    - another quote please
+    - that's not what i wanted
+    - give me a different one
+    - i want something else
+    - not satisfied
+    - show me another
+    - that was boring
+    - can you do better
+    - not interesting
+    - give me a better one
+    - change the quote
+    - next quote
+    - skip this one
+
+# ─────────────────────────────────────────────
+# GOODBYE INTENT (20 examples)
+# ─────────────────────────────────────────────
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - talk later
+    - catch you later
+    - see you later
+    - good night
+    - take care
+    - bye bye
+    - have a nice day
+    - gotta go
+    - i'm leaving
+    - until next time
+    - so long
+    - farewell
+    - bye for now
+    - peace out
+    - later
+    - see ya
+    - adios
+
+# ─────────────────────────────────────────────
+# HELP INTENT (20 examples) [NEW]
+# ─────────────────────────────────────────────
+- intent: help
+  examples: |
+    - help
+    - what can you do
+    - help me
+    - how does this work
+    - what are your features
+    - show me the menu
+    - what topics do you cover
+    - list categories
+    - what kind of quotes do you have
+    - tell me what you can do
+    - i need help
+    - guide me
+    - how to use this chatbot
+    - instructions
+    - what should i ask
+    - show me options
+    - available categories
+    - what do you offer
+    - how do i get a quote
+    - can you help me
+
+# ─────────────────────────────────────────────
+# FEELING SAD INTENT (20 examples) [NEW]
+# ─────────────────────────────────────────────
+- intent: feeling_sad
+  examples: |
+    - i am feeling sad
+    - i'm feeling down
+    - i feel depressed
+    - i am sad today
+    - feeling low
+    - not feeling good emotionally
+    - i am heartbroken
+    - i'm going through a tough time
+    - life is hard right now
+    - everything feels heavy
+    - i feel empty
+    - i'm feeling lonely
+    - i am not okay
+    - i feel like crying
+    - things aren't going well
+    - i am upset
+    - feeling blue
+    - nothing makes me happy
+    - i feel lost
+    - i need comfort
+
+# ─────────────────────────────────────────────
+# FEELING STRESSED INTENT (20 examples) [NEW]
+# ─────────────────────────────────────────────
+- intent: feeling_stressed
+  examples: |
+    - i am stressed
+    - i feel overwhelmed
+    - too much pressure
+    - i can't handle the stress
+    - work is stressing me out
+    - i'm anxious
+    - feeling burned out
+    - i need to relax
+    - i'm under a lot of pressure
+    - everything is too much
+    - i'm exhausted mentally
+    - feeling anxious lately
+    - i need some calm
+    - help me deal with stress
+    - i need peace of mind
+    - i'm feeling tense
+    - stress is killing me
+    - i can barely cope
+    - i need to unwind
+    - too much workload
+
+# ─────────────────────────────────────────────
+# THANK YOU INTENT (15 examples) [NEW]
+# ─────────────────────────────────────────────
+- intent: thank_you
+  examples: |
+    - thank you
+    - thanks
+    - thanks a lot
+    - thank you so much
+    - much appreciated
+    - thanks for the quote
+    - you're helpful
+    - that was great thanks
+    - i appreciate your help
+    - thanks bot
+    - thank you very much
+    - many thanks
+    - grateful for this
+    - thanks for helping
+    - i owe you one
+
+# ─────────────────────────────────────────────
+# ANOTHER QUOTE INTENT (20 examples) [NEW]
+# ─────────────────────────────────────────────
+- intent: another_quote
+  examples: |
+    - another one
+    - give another quote
+    - one more
+    - give me one more
+    - another quote please
+    - show me another
+    - next one
+    - more quotes
+    - one more please
+    - can i have another
+    - keep going
+    - give me more
+    - share another one
+    - i want one more
+    - continue
+    - next quote please
+    - another please
+    - more
+    - any more quotes
+    - hit me with another
+
+# ─────────────────────────────────────────────
+# DAILY QUOTE / QUOTE OF THE DAY (15 examples) [NEW]
+# ─────────────────────────────────────────────
+- intent: daily_quote
+  examples: |
+    - daily quote
+    - quote of the day
+    - today's quote
+    - give me the daily quote
+    - what is today's quote
+    - share the quote of the day
+    - morning quote
+    - daily inspiration
+    - today's thought
+    - thought of the day
+    - daily wisdom
+    - daily motivation
+    - give me a quote for today
+    - what's the special quote today
+    - inspire me for today
