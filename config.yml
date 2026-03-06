@@ -1,0 +1,77 @@
+# ═══════════════════════════════════════════════════════════
+# Rasa Configuration — OPTIMIZED for Accuracy
+# ═══════════════════════════════════════════════════════════
+recipe: default.v1
+
+# Unique assistant identifier
+assistant_id: quotes-recommendation-chatbot
+
+# ───────────────────────────────────────────────────────────
+# NLU Pipeline Configuration
+# Explicit pipeline for better accuracy (original used null/default)
+# ───────────────────────────────────────────────────────────
+language: en
+
+pipeline:
+  # Step 1: Tokenize text into words
+  - name: WhitespaceTokenizer
+
+  # Step 2: Extract regex-based features
+  - name: RegexFeaturizer
+
+  # Step 3: Add lexical and syntactic features (POS, word shape)
+  - name: LexicalSyntacticFeaturizer
+
+  # Step 4: Word-level bag-of-words features
+  - name: CountVectorsFeaturizer
+
+  # Step 5: Character-level n-gram features (improves accuracy for typos/variations)
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+
+  # Step 6: DIET Classifier — main intent classifier & entity extractor
+  # Increased epochs from default 100 to 150 for better accuracy
+  - name: DIETClassifier
+    epochs: 150
+    constrain_similarities: true
+    random_seed: 42
+
+  # Step 7: Map synonyms to canonical values
+  - name: EntitySynonymMapper
+
+  # Step 8: Response selector for retrieval intents
+  - name: ResponseSelector
+    epochs: 150
+    constrain_similarities: true
+
+  # Step 9: Fallback classifier — catches low-confidence predictions
+  # Lower threshold = stricter (more likely to trigger fallback)
+  - name: FallbackClassifier
+    threshold: 0.4
+    ambiguity_threshold: 0.1
+
+# ───────────────────────────────────────────────────────────
+# Dialogue Policies Configuration
+# ───────────────────────────────────────────────────────────
+policies:
+  # Memorize exact conversation patterns from stories
+  - name: MemoizationPolicy
+
+  # Follow rules strictly
+  - name: RulePolicy
+    core_fallback_threshold: 0.3
+    core_fallback_action_name: "action_default_fallback"
+    enable_fallback_prediction: true
+
+  # Handle unexpected intents in conversation
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 150
+
+  # Transformer-based dialogue policy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 150
+    constrain_similarities: true
