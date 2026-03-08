@@ -1,0 +1,48 @@
+# ═══════════════════════════════════════════════
+# .gitignore — Quotes Recommendation Chatbot
+# ═══════════════════════════════════════════════
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+rasa_env/
+venv/
+env/
+.env/
+
+# Rasa Models (large files — retrain locally)
+models/
+*.tar.gz
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+rasa.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing outputs
+results/
